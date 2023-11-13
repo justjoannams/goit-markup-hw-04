@@ -179,10 +179,9 @@ button {
     ),
     url(/images/people-office.jpg);
   background-repeat: no-repeat;
-  max-width: 1440px;
   margin: 0 auto;
   background-position: center;
-  background-size: cover;
+  background-size: 1440px, 1440px;
 }
 
 .hero-title {
@@ -290,8 +289,10 @@ button {
   justify-content: center;
 }
 
-.our-team-item-list {
-  border: 1px solid var(--navyblue);
+.team-card-details {
+  background: var(--white);
+  padding: 32px 16px;
+  border-radius: 0 0 4px 4px;
 }
 
 .our-team-social-list-icon-link {
@@ -303,9 +304,6 @@ button {
   background-color: var(--iris);
   color: var(--cloud);
   border-radius: 50%;
-  margin-right: 24px;
-  margin-top: 8px;
-  margin-bottom: 32px;
 }
 
 .our-team-social-list-icon-link:hover,
@@ -316,6 +314,13 @@ button {
 
 .our-team-item-list {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+.our-team-item-list {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .our-team-title {
@@ -350,11 +355,16 @@ button {
 .our-team-item-list-img {
   width: 264px;
   height: 260px;
-  margin-bottom: 32px;
 }
 
 .our-team {
   background-color: var(--cloud);
+}
+
+.our-team-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
 }
 
 /* Customers */
@@ -380,6 +390,7 @@ button {
   border: 1px solid var(--lightslate);
   border-radius: 4px;
   padding: 16px 32px 16px 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Project Menu */
@@ -428,19 +439,25 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 42px;
 }
 
 .all-menu-list {
   flex-basis: calc((100% - 48px) / 3);
 }
 
+.all-menu-item-list-details {
+  border: 1px solid var(--cornflower);
+  background: var(--white);
+  padding: 0px 0px 32px 0px;
+}
+
 .all-menu-item-list-img {
   width: 360px;
   height: 300px;
   background-color: var(--white);
-  border: 1px solid var(--cornflower);
-  padding-bottom: 32px;
   flex-shrink: 0;
+  padding-bottom: 32px;
 }
 
 .all-menu-item-list-title {
@@ -449,8 +466,8 @@ button {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .all-menu-item-list-paragraph {
